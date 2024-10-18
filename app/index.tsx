@@ -19,7 +19,7 @@ const index = () => {
         </Link>
 
         <ThemeProvider theme={invertTheme(theme)}>
-          <Link href="/signup">
+          <Link href="/signup" asChild>
             <StyledButton>
               <ButtonText>Sign up</ButtonText>
             </StyledButton>

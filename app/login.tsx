@@ -2,6 +2,7 @@ import { Alert, Pressable, StyleSheet, Text, View } from "react-native";
 import React, { useState } from "react";
 import { ThemeProvider } from "styled-components/native";
 import { theme, invertTheme } from "@/constants/Themes";
+import { styled } from "styled-components/native";
 import { Link } from "expo-router";
 import {
   ViewStyle,
@@ -13,46 +14,38 @@ import {
 } from "@/app/style";
 import { TextInput } from "react-native-gesture-handler";
 
-const login = () => {
-  const [user, setUser] = useState("");
-  const [password, setPass] = useState("");
-  const [passwordRepeat, setPassRepeat] = useState("");
+const StyledNormalText = styled.Text`
+  margin-top: 30px;
+  font-size: larger;
+  margin-bottom: 10px;
+`;
 
-  const handleLogin = () => {
-    console.log("button clicked");
-    if (password !== passwordRepeat) {
-      Alert.alert("Passwords must match");
-    } else {
-      Alert.alert("Wszystko git");
-    }
-  };
+const login = () => {
+  const [login, setLogin] = useState("");
+  const [password, setPassword] = useState("");
 
   return (
     <ThemeProvider theme={theme}>
       <ViewStyle>
         <TopLeftView>
-          <StyledText>Sign in</StyledText>
+          <StyledText>Sign In</StyledText>
         </TopLeftView>
-
         <StyledTextInput
-          placeholder="User Name"
-          onChangeText={(newText) => setUser(newText)}
-          value={user}
+          placeholder="E-mail or phone number"
+          onChangeText={(newText) => setLogin(newText)}
+          value={login}
         ></StyledTextInput>
         <StyledTextInput
           placeholder="Password"
-          secureTextEntry={true}
-          onChangeText={(newText) => setPass(newText)}
+          onChangeText={(newText) => setPassword(newText)}
           value={password}
         ></StyledTextInput>
-        <StyledTextInput
-          placeholder="Repeat password"
-          secureTextEntry={true}
-          onChangeText={(newText) => setPassRepeat(newText)}
-          value={passwordRepeat}
-        ></StyledTextInput>
-        <StyledButton onPress={handleLogin}>
-          <ButtonText>Confirm</ButtonText>
+        <StyledButton>
+          <ButtonText>Log In</ButtonText>
+        </StyledButton>
+        <StyledNormalText>OR</StyledNormalText>
+        <StyledButton>
+          <ButtonText>Log In With Facebook</ButtonText>
         </StyledButton>
       </ViewStyle>
     </ThemeProvider>

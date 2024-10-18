@@ -21,6 +21,7 @@ export const ViewStyle = styled.View`
   flex: 1;
   justify-content: center;
   align-items: center;
+  padding-bottom: 400px;
 `;
 
 export const StyledText = styled.Text`
@@ -28,18 +29,18 @@ export const StyledText = styled.Text`
   text-align: center;
   font-size: ${(props) => props.theme.text.headlineFontSize};
   font-weight: ${(props) => props.theme.text.headlineFontWeight};
-  font-family: Arial;
+  margin-bottom: 40px;
 `;
 
 export const StyledTextInput = styled.TextInput`
   padding: 10px;
-  width: 250px;
+  width: 300px;
   background-color: ${(props) => props.theme.colors.background};
-  text-align: center;
+  text-align: left;
   justify-content: center;
   border-radius: 30px;
   font-size: 15px;
-  margin-top: 10px;
+  margin-top: 30px;
   border: 2px solid black;
 `;
 
@@ -50,7 +51,7 @@ export const StyledButton = styled(Pressable)`
   align-items: center;
   justify-content: center;
   border-radius: 30px;
-  margin-top: 10px;
+  margin-top: ${(props) => props.theme.buttons.marginTop || "10px"};
   border: 2px solid ${(props) => props.theme.colors.border};
 `;
 
@@ -59,5 +60,4 @@ export const ButtonText = styled(Text)`
   font-size: 20px;
 
   font-weight: lighter;
-  font-family: Arial;
 `;
