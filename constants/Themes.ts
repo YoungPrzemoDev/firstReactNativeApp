@@ -7,8 +7,8 @@ export const theme = {
   },
   text: {
     font: "Arial",
-    headlineFontSize: 30,
-    normalFontSize: 15,
+    headlineFontSize: "30px",
+    normalFontSize: "15px",
     headlineFontWeight: "bold",
   },
 };

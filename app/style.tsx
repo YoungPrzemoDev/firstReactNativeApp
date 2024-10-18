@@ -31,6 +31,18 @@ export const StyledText = styled.Text`
   font-family: Arial;
 `;
 
+export const StyledTextInput = styled.TextInput`
+  padding: 10px;
+  width: 250px;
+  background-color: ${(props) => props.theme.colors.background};
+  text-align: center;
+  justify-content: center;
+  border-radius: 30px;
+  font-size: 15px;
+  margin-top: 10px;
+  border: 2px solid black;
+`;
+
 export const StyledButton = styled(Pressable)`
   background-color: ${(props) => props.theme.colors.headLines};
   padding: 10px;
@@ -44,7 +56,7 @@ export const StyledButton = styled(Pressable)`
 
 export const ButtonText = styled(Text)`
   color: ${(props) => props.theme.colors.text};
-  font-size: 20;
+  font-size: 20px;
 
   font-weight: lighter;
   font-family: Arial;

@@ -19,12 +19,11 @@ const index = () => {
         </Link>
 
         <ThemeProvider theme={invertTheme(theme)}>
-          <StyledButton
-            onPressIn={() => console.log("in")}
-            onPressOut={() => console.log("wyjebalo")}
-          >
-            <ButtonText>Sign up</ButtonText>
-          </StyledButton>
+          <Link href="/signup">
+            <StyledButton>
+              <ButtonText>Sign up</ButtonText>
+            </StyledButton>
+          </Link>
         </ThemeProvider>
       </ViewStyle>
     </ThemeProvider>
