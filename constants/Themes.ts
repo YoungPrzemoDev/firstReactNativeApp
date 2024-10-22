@@ -13,6 +13,9 @@ export const theme = {
     headlineFontSize: "40px",
     normalFontSize: "15px",
     headlineFontWeight: "bold",
+    position: {
+      absolute: "absolute",
+    },
   },
   buttons: {
     marginTop: "25px",
